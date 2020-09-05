@@ -8,8 +8,8 @@
         <div class="card-body">
             <img class="home-img" src="{{ post.author.profile.image.url }}" style = "object-fit:cover;">
             <small class = "text-muted"><a href = "{% url 'blog-user-post' post.author.username %}">{{post.author}}</a> , {{post.date|date:"F d,Y"}}</small>
-            <a href="{% url 'post-detail' post.id %}"><h2 class="card-title">{{post.title}}</h2></a>
-            <p class="card-text">{{post.content|linebreaks|truncatewords:20}}</p>
+            <a  class = "blog-title" href="{% url 'post-detail' post.id %}"><h2 class="card-title">{{post.title}}</h2></a>
+            <p class="card-text">{{post.content|linebreaksbr|truncatewords:20}}</p>
           <!-- <a href="#" class="btn btn-primary">See Profile</a> -->
         </div>
     </div>    
